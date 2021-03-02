@@ -33,16 +33,13 @@ var userPrompts = inquirer.prompt([
     {
         type: "input",
         name: "userImage",
-        message: "Lastly, how about you leave an image address so people can identify you?"
+        message: "Lastly, how about you leave an image address so people can identify you?",
+        default: "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
     }
 ]);
 
 userPrompts.then(res => {
     let { usersName, location, bio, linkedin, github, userImage } = res;
-
-    if (userImage = "") {
-        userImage = "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png";
-    }
 
     const userPortfolio = /*html*/ `<!DOCTYPE html>
     <html lang="en">
@@ -62,7 +59,7 @@ userPrompts.then(res => {
         <div class="container">
             <section id="content" class="row">
                 <div class="col-sm-12 col-md-6">
-                    <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="User Picture" style="width: 100%; height: auto;"/>
+                    <img src=${userImage} alt="User Picture" style="width: 100%; height: auto;"/>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="row" id="location">
