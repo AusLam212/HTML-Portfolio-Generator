@@ -1,0 +1,24 @@
+{
+  "name": "html-portfolio-generator",
+  "version": "1.0.0",
+  "description": "Generates a simple HTML portfolio using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AusLam212/HTML-Portfolio-Generator.git"
+  },
+  "author": "Austin Lambert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AusLam212/HTML-Portfolio-Generator/issues"
+  },
+  "homepage": "https://github.com/AusLam212/HTML-Portfolio-Generator#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^8.0.0",
+    "util": "^0.12.3"
+  }
+}

@@ -38,7 +38,7 @@ var userPrompts = inquirer.prompt([
 ]);
 
 userPrompts.then(res => {
-    const { userName, location, bio, linkedin, github, userImage } = res.data;
+    let { usersName, location, bio, linkedin, github, userImage } = res;
 
     if (userImage = "") {
         userImage = "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png";
@@ -56,7 +56,7 @@ userPrompts.then(res => {
     <body>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-              <h1 class="display-4" style="text-align: center;">${userName}</h1>
+              <h1 class="display-4" style="text-align: center;">${usersName}</h1>
             </div>
           </div>
         <div class="container">
@@ -93,4 +93,10 @@ userPrompts.then(res => {
 
     writeFileAsync("Portfolio.html", userPortfolio);
 
+})
+.then(() => {
+    console.log("SUCCESS!");
+})
+.catch(err => {
+    console.log(err);
 })
